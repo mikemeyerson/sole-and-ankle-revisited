@@ -77,6 +77,7 @@ const Nav = styled.nav`
   margin: 0px 48px;
 
   @media ${QUERIES.tabletAndBelow} {
+    flex: 0 0 auto;
     gap: 34px;
     margin: 0;
   }
