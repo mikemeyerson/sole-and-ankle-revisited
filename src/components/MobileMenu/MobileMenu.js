@@ -48,7 +48,7 @@ const Overlay = styled(DialogOverlay)`
 `;
 
 const Content = styled(DialogContent)`
-  background: ${COLORS.white};
+  background: var(--color-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,14 +73,14 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled.a`
-  color: ${COLORS.gray[900]};
+  color: var(--color-gray-900);
   font-size: 1rem;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: ${WEIGHTS.medium};
 
   &:hover {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 `;
 
@@ -93,7 +93,7 @@ const Footer = styled.footer`
 `;
 
 const FooterLink = styled.a`
-  color: ${COLORS.gray[700]};
+  color: var(--color-gray-700);
   font-size: ${14 / 18}rem;
   font-weight: ${WEIGHTS.normal};
   text-decoration: none;

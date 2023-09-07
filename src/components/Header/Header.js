@@ -28,7 +28,9 @@ const Header = () => {
           <DesktopNavLink href="/men">Men</DesktopNavLink>
           <DesktopNavLink href="/women">Women</DesktopNavLink>
           <DesktopNavLink href="/kids">Kids</DesktopNavLink>
-          <DesktopNavLink href="/collections">Collections</DesktopNavLink>
+          <DesktopNavLink href="/collections">
+            Collections Collections
+          </DesktopNavLink>
           <MobileNavLink href="/sale" aria-label="Sale">
             <Icon id="shopping-bag" color={COLORS.gray[900]} size={24} />
           </MobileNavLink>
@@ -59,17 +61,19 @@ const MainHeader = styled.div`
   align-items: baseline;
   padding: 18px 32px;
   height: 72px;
-  border-bottom: 1px solid ${COLORS.gray[300]};
+  border-bottom: 1px solid var(--color-gray-300);
+  overflow-x: auto;
 
   @media ${QUERIES.tabletAndBelow} {
-    border-top: 4px solid ${COLORS.gray[900]};
+    border-top: 4px solid var(--color-gray-900);
     align-items: center;
   }
 `;
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  flex: 1 0 auto;
+  gap: calc(14vw - 6rem);
   margin: 0px 48px;
 
   @media ${QUERIES.tabletAndBelow} {
@@ -96,11 +100,11 @@ const DesktopNavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${COLORS.gray[900]};
+  color: var(--color-gray-900);
   font-weight: ${WEIGHTS.medium};
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 
   @media ${QUERIES.tabletAndBelow} {
