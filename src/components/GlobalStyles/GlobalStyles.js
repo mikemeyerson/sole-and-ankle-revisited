@@ -73,7 +73,7 @@ html {
   */
   --reach-dialog: 1;
 
-  --white: ${COLORS.white};
+  --color-white: ${COLORS.white};
   --color-gray-100: ${COLORS.gray[100]};
   --color-gray-300: ${COLORS.gray[300]};
   --color-gray-500: ${COLORS.gray[500]};
