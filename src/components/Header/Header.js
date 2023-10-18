@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
-import { COLORS, QUERIES, WEIGHTS } from "../../constants";
+import { QUERIES, WEIGHTS } from "../../constants";
 import Logo from "../Logo";
 import SuperHeader from "../SuperHeader";
 import MobileMenu from "../MobileMenu";
@@ -19,9 +19,9 @@ const Header = () => {
     <header>
       <SuperHeader />
       <MainHeader>
-        <Side>
+        <LogoWrapper>
           <Logo />
-        </Side>
+        </LogoWrapper>
         <Nav>
           <DesktopNavLink href="/sale">Sale</DesktopNavLink>
           <DesktopNavLink href="/new">New&nbsp;Releases</DesktopNavLink>
@@ -32,17 +32,17 @@ const Header = () => {
             Collections Collections
           </DesktopNavLink>
           <MobileNavLink href="/sale" aria-label="Sale">
-            <Icon id="shopping-bag" color={COLORS.gray[900]} size={24} />
+            <Icon id="shopping-bag" color="var(--color-gray-900)" size={24} />
           </MobileNavLink>
           <MobileNavButton aria-label="Search">
-            <Icon id="search" color={COLORS.gray[900]} size={24} />
+            <Icon id="search" color="var(--color-gray-900)" size={24} />
           </MobileNavButton>
 
           <MobileNavButton
             aria-label="Open menu"
             onClick={() => setShowMobileMenu(true)}
           >
-            <Icon id="menu" color={COLORS.gray[900]} size={24} />
+            <Icon id="menu" color="var(--color-gray-900)" size={24} />
           </MobileNavButton>
         </Nav>
         <RightSide />
@@ -59,14 +59,18 @@ const Header = () => {
 const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
-  padding: 18px 32px;
-  height: 72px;
+  padding: 20px 32px;
   border-bottom: 1px solid var(--color-gray-300);
   overflow-x: auto;
 
   @media ${QUERIES.tabletAndBelow} {
     border-top: 4px solid var(--color-gray-900);
     align-items: center;
+    justify-content: space-between;
+  }
+
+  @media ${QUERIES.phoneAndBelow} {
+    padding: 20px 16px;
   }
 `;
 
@@ -87,11 +91,17 @@ const Nav = styled.nav`
   }
 `;
 
-const Side = styled.div`
+const LogoWrapper = styled.div`
   flex: 1;
+
+  @media ${QUERIES.tabletAndBelow} {
+    flex: revert;
+  }
 `;
 
-const RightSide = styled(Side)`
+const RightSide = styled.div`
+  flex: 1;
+
   @media ${QUERIES.tabletAndBelow} {
     display: none;
   }

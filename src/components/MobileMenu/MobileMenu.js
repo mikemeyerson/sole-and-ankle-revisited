@@ -18,8 +18,9 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
       <Content>
         <DismissButton onClick={onDismiss}>
           <VisuallyHidden>Dismiss menu</VisuallyHidden>
-          <Icon id="close" color={COLORS.gray[900]} size={24} />
+          <Icon id="close" color="var(--color-gray-900)" size={24} />
         </DismissButton>
+        <Filler />
         <Nav>
           <NavLink href="/sale">Sale</NavLink>
           <NavLink href="/new">New&nbsp;Releases</NavLink>
@@ -84,12 +85,16 @@ const NavLink = styled.a`
   }
 `;
 
+const Filler = styled.div`
+  flex: 1;
+`;
+
 const Footer = styled.footer`
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 14px;
-  position: absolute;
-  bottom: 32px;
+  justify-content: flex-end;
 `;
 
 const FooterLink = styled.a`
