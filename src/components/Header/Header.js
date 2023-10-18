@@ -28,9 +28,7 @@ const Header = () => {
           <DesktopNavLink href="/men">Men</DesktopNavLink>
           <DesktopNavLink href="/women">Women</DesktopNavLink>
           <DesktopNavLink href="/kids">Kids</DesktopNavLink>
-          <DesktopNavLink href="/collections">
-            Collections Collections
-          </DesktopNavLink>
+          <DesktopNavLink href="/collections">Collections</DesktopNavLink>
           <MobileNavLink href="/sale" aria-label="Sale">
             <Icon id="shopping-bag" color="var(--color-gray-900)" size={24} />
           </MobileNavLink>
